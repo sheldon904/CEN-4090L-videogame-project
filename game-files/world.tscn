@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c46d1ojav30mr"]
+[gd_scene load_steps=9 format=3 uid="uid://c46d1ojav30mr"]
 
 [ext_resource type="Script" path="res://bg.gd" id="1_3ul4q"]
 [ext_resource type="Texture2D" uid="uid://dc8tmprk6q7iv" path="res://sunny-land/assets/environment/tileset.png" id="1_dtldv"]
 [ext_resource type="PackedScene" uid="uid://deq6u2ns25qdu" path="res://player/player.tscn" id="1_ofxca"]
 [ext_resource type="Texture2D" uid="uid://jwmo3qolq4oa" path="res://Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="2_tb6i8"]
+[ext_resource type="PackedScene" uid="uid://dicosi2ijwiph" path="res://frog.tscn" id="5_3yqrb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pk4ho"]
 texture = ExtResource("1_dtldv")
@@ -149,6 +150,20 @@ texture = ExtResource("1_dtldv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pk4ho")
 
+[sub_resource type="GDScript" id="GDScript_dsmbn"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = \"HP: \" + str(get_node(\"../../Player/Player\").health)
+"
+
 [node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -168,5 +183,35 @@ position = Vector2(508, 324)
 scale = Vector2(2.64583, 2.7)
 texture = ExtResource("2_tb6i8")
 
-[node name="Player" parent="." instance=ExtResource("1_ofxca")]
-position = Vector2(216, 266)
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_ofxca")]
+position = Vector2(422, 340)
+
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="Frog" parent="Mobs" instance=ExtResource("5_3yqrb")]
+position = Vector2(267, 350)
+
+[node name="Frog2" parent="Mobs" instance=ExtResource("5_3yqrb")]
+position = Vector2(588, 241)
+
+[node name="Frog3" parent="Mobs" instance=ExtResource("5_3yqrb")]
+position = Vector2(415, 192)
+
+[node name="Frog4" parent="Mobs" instance=ExtResource("5_3yqrb")]
+position = Vector2(284, 212)
+
+[node name="Frog5" parent="Mobs" instance=ExtResource("5_3yqrb")]
+position = Vector2(635, 291)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HP" type="Label" parent="UI"]
+offset_left = 54.0
+offset_top = 27.0
+offset_right = 103.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 24
+text = "HP"
+script = SubResource("GDScript_dsmbn")

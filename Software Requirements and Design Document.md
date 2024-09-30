@@ -68,4 +68,5 @@ We will be developing a 2D platforming game where the player has to maneuver thr
 
 ![Use Case Diagram](./images/useCase.drawio.png)
 
-##### 5. Class Diagram and/or Sequence Diagram 
+##### 5. Class Diagram
+![Class Diagram](./images/class_diagram_game_project.png)

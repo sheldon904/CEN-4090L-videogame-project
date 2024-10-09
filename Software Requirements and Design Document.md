@@ -12,34 +12,34 @@ William White
 We will be developing a 2D platforming game where the player has to maneuver through an infinite level, avoiding obstacles. The level will get more challenging and introduce new mechanics and obstacles as the player progresses. 
    
 ##### 2. Functional Requirements 
-1. New game will start when the player presses the "Play" button on the main menu 
+1. A new game will start when the player presses the "Play" button on the main menu 
    - **Priority**: High 
-   - Essential for initiating gameplay 
+   - This is essential for initiating gameplay 
 
-2. Player can exit game by pressing the "Quit" button on the main menu
+2. The player can exit game by pressing the "Quit" button on the main menu
    - **Priority**: High
-   - Important for providing players with easy way to exit game 
+   - This is important for providing players with easy way to exit game 
 
-3. "world" scene gets loaded when the players presses the "Play" button 
+3. The "world" scene gets loaded when the players presses the "Play" button 
    - **Priority**: High
-   - Ensures the game starts and players are taken into game world 
+   - This ensures the game starts and players are taken into game world 
 
-4. System shall allow the player to control a character within the game world 
+4. The system shall allow the player to control a character within the game world 
    - **Priority**: High
 
-5. System shall detect and respond to collision events in the game world 
+5. The system shall detect and respond to collision events in the game world 
    - **Priority**: Medium 
 
-6. System shall allow player to interact with environment boundaries 
+6. The system shall allow player to interact with environment boundaries 
    - **Priority**: Medium 
-   - Interaction with environment boundaries contributes to game mechanics 
+   - Interactions with environment boundaries contribute to game mechanics 
 
 7. The system shall transition between different scenes (between game levels and menus).
    - **Priority**: Medium 
 
-8. Allow the player to return to main menu from game world
+8. The system should allow the player to return to main menu from game world
    - **Priority**: Low
-   - Less critical during gameplay 
+   - This is less critical during gameplay, but would improve the user's experience 
 ##### 3. Non-functional Requirements 
 1. The game needs to run efficiently on desktop platforms
    - **Priority**: High

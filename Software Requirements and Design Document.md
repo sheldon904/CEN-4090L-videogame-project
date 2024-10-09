@@ -2,71 +2,73 @@
 
 Version 1.0
 
-##### Authors 
+#### Authors 
 Julian Schumacher 
 Ben Semenov
 Reid McClellan
 William White
 
-##### 1. Overview
-We will be developing a 2D platforming game where the player has to maneuver through an infinite level, avoiding obstacles. The level will get more challenging and introduce new mechanics and obstacles as the player progresses. 
-   
-##### 2. Functional Requirements 
-1. A new game will start when the player presses the "Play" button on the main menu 
-   - **Priority**: High 
-   - This is essential for initiating gameplay 
+#### 1. Overview
+We are developing a 2D platforming game where the player maneuvers through an infinite level while avoiding obstacles. The game becomes progressively more challenging by introducing new mechanics, enemies, and obstacles as the player advances. In addition to environmental hazards, the player will encounter enemies like frogs and opossums, which have unique behaviors and contribute to the difficulty. Collectible items, such as cherries, are scattered throughout the levels to incentivize exploration and survival.
 
-2. The player can exit game by pressing the "Quit" button on the main menu
-   - **Priority**: High
-   - This is important for providing players with easy way to exit game 
+#### 2. Functional Requirements
+1. A new game will start when the player presses the "Play" button on the main menu.
+	- **Priority**: High
+	- This is essential for initiating gameplay.
 
-3. The "world" scene gets loaded when the players presses the "Play" button 
-   - **Priority**: High
-   - This ensures the game starts and players are taken into game world 
+2. The player can exit the game by pressing the "Quit" button on the main menu.
+	- **Priority**: High
+	- This is important for providing players with a quick way to exit.
 
-4. The system shall allow the player to control a character within the game world 
-   - **Priority**: High
+3. The "world" scene will be loaded when the player presses the "Play" button.
+	- **Priority**: High
+	- Ensures that the game world is initiated properly.
 
-5. The system shall detect and respond to collision events in the game world 
-   - **Priority**: Medium 
+4. The system shall allow the player to control a character (player.gd script) within the game world, including movement, jumping, and interacting with the environment.
+	- **Priority**: High
+	- Character movement and control are central to gameplay.
 
-6. The system shall allow player to interact with environment boundaries 
-   - **Priority**: Medium 
-   - Interactions with environment boundaries contribute to game mechanics 
+5. The system shall detect and respond to collisions between the player and enemies, such as frogs and opossums (frog.gd, oposum.gd scripts).
+	- **Priority**: High
+	- This is necessary for handling game mechanics such as health loss or game over events.
 
-7. The system shall transition between different scenes (between game levels and menus).
-   - **Priority**: Medium 
+6. The system shall allow the player to collect items like cherries (cherry.gd script) and update their score or provide other benefits.
+	- **Priority**: Medium
+	- Item collection enhances the player’s progression and rewards exploration.
 
-8. The system should allow the player to return to main menu from game world
-   - **Priority**: Low
-   - This is less critical during gameplay, but would improve the user's experience 
-##### 3. Non-functional Requirements 
-1. The game needs to run efficiently on desktop platforms
-   - **Priority**: High
+7. The system shall introduce dynamic obstacles and enemies that increase in difficulty as the player progresses (implemented in bg.gd and related enemy scripts).
+	- **Priority**: Medium
+	- Dynamic challenge is core to the game's increasing difficulty.
 
-2. The game should run at a stable frame rate of at least 60 FPS
-   - **Priority**: High
-   - A smooth gameplay experience is expected
+8. The system shall transition between different scenes, such as game levels and the main menu.
+	- **Priority**: Medium
+	- Scene transitions are essential for level progression and navigation between different parts of the game.
 
-3. The game should load scenes with very little delay
-   - **Priority**: Medium
-   - Quick loading times are necessary to prevent interruptions 
+9. The system shall allow the player to return to the main menu from the game world.
+	- **Priority**: Low
+	- This is useful for user convenience but is less critical during gameplay.
 
-4. The game should use minimal CPU and GPU resources 
-   - **Priority**: Medium
-   - Efficient use of system resources ensures good performance 
+#### 3. Non-functional Requirements
+1. The game needs to run efficiently on desktop platforms, with compatibility for different operating systems.
+	- **Priority**: High
 
-5. The game needs to be compatible across desktop operating systems 
-   - **Priority**: High
-   - This ensures wider distribution 
+2. The game should maintain a stable frame rate of at least 60 FPS.
+	- **Priority**: High
+	- Ensures smooth gameplay, which is critical for platformers.
 
-6. The game will have a simple and intuitive user interface with responsive controls 
-   - **Priority**: High 
-   - This is necessary for the game to feel fluid and easy to interact with 
+3. The game should load scenes quickly, especially when transitioning between the main menu, levels, and game over screens.
+	- **Priority**: Medium
 
-##### 4. Use Case Diagram 
+4. The game should efficiently use CPU and GPU resources, especially as new enemies and obstacles (frog.gd, oposum.gd, bg.gd) are introduced.
+	- **Priority**: Medium
+
+5. The game will have a simple and intuitive user interface with responsive controls.
+	- **Priority**: High
+	- Essential for an engaging user experience.
+
+#### 4. Use Case Diagram 
 
 ![Use Case Diagram](./images/useCase.drawio.png)
 
-##### 5. Class Diagram
+#### 5. Class Diagram
 ![Class Diagram](./images/class_diagram_game_project.png)

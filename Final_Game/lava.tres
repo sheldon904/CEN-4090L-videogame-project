@@ -1,0 +1,26 @@
+[gd_resource type="AnimatedTexture" load_steps=8 format=3 uid="uid://de446r2fxguwe"]
+
+[ext_resource type="Texture2D" uid="uid://cy75r1xmarrjk" path="res://FireLevel/frame_0_delay-0.1s.png" id="1_kgyft"]
+[ext_resource type="Texture2D" uid="uid://gasp4u0q4hhx" path="res://FireLevel/frame_1_delay-0.1s.png" id="2_ajm63"]
+[ext_resource type="Texture2D" uid="uid://b0pxopv2xjm4m" path="res://FireLevel/frame_2_delay-0.1s.png" id="3_5ba7j"]
+[ext_resource type="Texture2D" uid="uid://dy40rnafc8e8b" path="res://FireLevel/frame_3_delay-0.1s.png" id="4_w4gtm"]
+[ext_resource type="Texture2D" uid="uid://cfjopsalv8ir" path="res://FireLevel/frame_4_delay-0.1s.png" id="5_jvxl3"]
+[ext_resource type="Texture2D" uid="uid://clptxmtoymate" path="res://FireLevel/frame_5_delay-0.1s.png" id="6_unt8f"]
+[ext_resource type="Texture2D" uid="uid://cbyuiwrhg5dxd" path="res://FireLevel/frame_6_delay-0.1s.png" id="7_her8l"]
+
+[resource]
+frames = 7
+speed_scale = 4.2
+frame_0/texture = ExtResource("1_kgyft")
+frame_1/texture = ExtResource("2_ajm63")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_5ba7j")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_w4gtm")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_jvxl3")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_unt8f")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_her8l")
+frame_6/duration = 1.0
